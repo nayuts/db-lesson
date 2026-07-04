@@ -18,11 +18,11 @@ ON users.id = tweets.user_id
 WHERE users.name = '田中誠';
 
 ### 3. 「山田太郎」が投稿した直近2件の内容(content)を取得してください。
-SELECT tweet_count
+SELECT tweet.count
 FROM users
 INNER JOIN tweets
 ON users.id = tweets.user_id
-WHERE users.name = '山田太郎';
+WHERE users.name = '山田太郎'
 ORDER BY tweets.created_at DESC
 LIMIT 2;
 
